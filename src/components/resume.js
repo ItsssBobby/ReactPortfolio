@@ -1,40 +1,31 @@
-import React, { useState } from 'react';
-import { Viewer } from 'react-doc-viewer';
+import React from 'react';
+import { Document, Page, pdfjs } from 'react-pdf';
+import '../Resume.css';
 
-function Resume() {
-  const [showDocViewer, setShowDocViewer] = useState(false);
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-  const handleOpenViewer = () => {
-    setShowDocViewer(true);
+function Resume({ isModalOpen, setIsModalOpen }) {
+  const handleClose = () => {
+    setIsModalOpen(false);
   };
 
-  const handleCloseViewer = () => {
-    setShowDocViewer(false);
-  };
+  const resume = `${process.env.PUBLIC_URL}/path/to/your/resume.pdf`;
 
   return (
-    <section>
-      <h2>Resume</h2>
-
-      {showDocViewer && (
-        <div className="doc-viewer">
-          <div className="doc-viewer-content">
-            <span className="doc-viewer-close" onClick={handleCloseViewer}>
-              &times;
-            </span>
-            <Viewer
-              fileType="docx"
-              filePath="../../public/resume/Resume_-_Robert_McMullen.docx"
-            />
-          </div>
+    isModalOpen && (
+      <div className="resume">
+        <div className="resume__backdrop" onClick={handleClose}></div>
+        <div className="resume__container">
+          <button className="resume__closeButton" onClick={handleClose}>
+            &times;
+          </button>
+          <Document file={resume} className="pdf-container">
+            <Page pageNumber={1} className="pdf-container-inner" />
+          </Document>
         </div>
-      )}
-
-      <p>
-        Click <a href="#" onClick={handleOpenViewer}>here</a> to view my resume.
-      </p>
-    </section>
+      </div>
+    )
   );
 }
 
-export default Resume;
+export { Resume };
