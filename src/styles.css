@@ -62,11 +62,6 @@ nav li button:hover {
   text-decoration: underline;
 }
 
-nav li.active button {
-  font-weight: bold;
-  text-shadow: 1px 1px #4a90e2;
-}
-
 section {
   margin-bottom: 40px;
   padding: 20px;
@@ -240,6 +235,82 @@ footer a:hover img {
 
 .dropdown:hover .dropdown-options {
   display: block;
+}
+.language-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.language-icon-wrapper img {
+  width: 100px;
+  height: 100px;
+}
+
+.language-icon-wrapper span {
+  font-size: 1rem;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.languages-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .about-me-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-me-text {
+    text-align: center;
+  }
+}
+
+.about-me-text p {
+  text-align: justify;
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-indent: 30px;
+}
+
+#about-me > h2 {
+  text-align: center;
+}
+
+.about-me-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.about-me-image img {
+  max-width: 50%;
+  height: 512px;
+  border-radius: 50%;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+nav li a.active {
+  font-weight: bold;
+  text-shadow: 1px 1px #eb2e20;
 }
 
 @media screen and (min-width: 1200px) {

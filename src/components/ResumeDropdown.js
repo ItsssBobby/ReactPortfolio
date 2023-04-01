@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+import React, { useState, useRef, useEffect } from "react";
+import { Document, Page } from "react-pdf/dist/esm/entry.webpack5";
 
 function ViewResumeButton({ onButtonClick }) {
   const handleClick = () => {
@@ -20,7 +20,7 @@ function ResumeDropdown() {
   };
 
   const handleDownloadResume = () => {
-    window.open('/resume.docx', '_blank');
+    window.open("/resume.docx", "_blank");
   };
 
   useEffect(() => {
@@ -31,9 +31,9 @@ function ResumeDropdown() {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [dropdownRef]);
 
@@ -52,12 +52,17 @@ function ResumeDropdown() {
       )}
       {showViewer && (
         <div className="pdf-modal" onClick={() => setShowViewer(false)}>
-          <div className="pdf-modal-content" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="pdf-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="pdf-container">
-              <Document file="/resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
-                {Array.from(new Array(numPages), (el, index) => (
-                  <Page key={`page_${index + 1}`} pageNumber={index + 1} renderTextLayer={false} />
-                ))}
+              <Document
+                pageLayout="singlePage"
+                file="/resume.pdf"
+                onLoadSuccess={onDocumentLoadSuccess}
+              >
+                <Page pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false}/>
               </Document>
             </div>
           </div>

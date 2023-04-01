@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { ResumeDropdown } from './ResumeDropdown';
 
 function Navigation() {
@@ -7,19 +7,19 @@ function Navigation() {
     <nav>
       <ul>
         <li>
-          <Link exact="true" to="/" activeclassname="active">
+          <NavLink exact to="/" activeClassName="active">
             About Me
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link exact="true" to="/portfolio" activeclassname="active">
+          <NavLink exact to="/portfolio" activeClassName="active">
             Portfolio
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link exact="true" to="/contact" activeclassname="active">
+          <NavLink exact to="/contact" activeClassName="active">
             Contact
-          </Link>
+          </NavLink>
         </li>
         <li>
           <ResumeDropdown />
