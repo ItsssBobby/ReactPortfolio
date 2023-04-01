@@ -119,13 +119,46 @@ footer li:last-child {
   margin-right: 0;
 }
 
-footer a img {
-  width: 30px;
-  height: 30px;
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding: 20px;
+  border-top: 2px solid #4a90e2;
+  background-color: #ffffff;
+}
+
+.footer ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer li {
+  margin-right: 20px;
+}
+
+.footer li:last-child {
+  margin-right: 0;
+}
+
+.footer a {
+  color: #333;
+  font-size: 50px;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: #4a90e2;
+}
+
+.icon-link {
   transition: transform 0.2s ease;
 }
 
-footer a:hover img {
+.icon-link:hover {
   transform: scale(1.2);
 }
 

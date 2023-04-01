@@ -1,13 +1,17 @@
-import React from "react";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faStackOverflow, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-// Whenever we try to render an array containing JSX, React knows to render each JSX element separately
 function Footer() {
   return (
-    <div className="footer">
-        <h2>
-            Footer Page
-        </h2>
-    </div>
+    <footer className="footer">
+      <ul>
+        <li><a className="icon-link" href="https://github.com/ItsssBobby" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
+        <li><a className="icon-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+        {/* <li><a className="icon-link" href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faStackOverflow} /></a></li>
+        <li><a className="icon-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a></li> */}
+      </ul>
+    </footer>
   );
 }
 
