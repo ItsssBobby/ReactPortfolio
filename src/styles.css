@@ -370,7 +370,8 @@ nav li a:hover {
 
 nav li a.active {
   font-weight: bold;
-  text-shadow: 1px 1px #eb2e20;
+  text-shadow: 1px 1px #4a90e2;
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 1200px) {

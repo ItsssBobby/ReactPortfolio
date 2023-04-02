@@ -12,8 +12,8 @@ function Navigation() {
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="/portfolio" activeClassName="active">
-            Portfolio
+          <NavLink exact to="/projects" activeClassName="active">
+            Projects
           </NavLink>
         </li>
         <li>
