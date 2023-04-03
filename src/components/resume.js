@@ -4,7 +4,7 @@ import '../Resume.css';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-function Resume({ isModalOpen, setIsModalOpen }) {
+const Resume = ({ isModalOpen, setIsModalOpen }) => {
   const handleClose = () => {
     setIsModalOpen(false);
   };
@@ -28,4 +28,4 @@ function Resume({ isModalOpen, setIsModalOpen }) {
   );
 }
 
-export default { Resume };
+export default Resume;
