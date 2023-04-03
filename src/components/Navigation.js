@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { ResumeDropdown } from './ResumeDropdown';
+import ResumeDropdown from './ResumeDropdown';
 
 function Navigation() {
   return (
@@ -29,4 +29,4 @@ function Navigation() {
   );
 }
 
-export { Navigation };
+export default Navigation;

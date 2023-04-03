@@ -72,4 +72,4 @@ function ResumeDropdown() {
   );
 }
 
-export { ResumeDropdown };
+export default ResumeDropdown;
