@@ -28,4 +28,4 @@ function Resume({ isModalOpen, setIsModalOpen }) {
   );
 }
 
-export { Resume };
+export default { Resume };
