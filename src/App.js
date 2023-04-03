@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navigation } from "./components/Navigation";
-import AboutMe from "./components/AboutMe";
-import Contact from "./components/Contact";
+import AboutMe from "./components/AboutMe"; 
 import { Resume } from "./components/Resume";
 import Footer from "./components/Footer";
 import "./styles.css";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
   const [showViewer, setShowViewer] = useState(false);
