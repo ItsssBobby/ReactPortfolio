@@ -22,27 +22,31 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+ 
+    // TODO: Temporary alert, delete when working
+    alert('Error sending email. Please try again.');
+
+  // TODO: Undo this code when production ready 
+    // if (formValid) {
+    //   try {
+    //     const response = await fetch('/api/send-email/', {
+    //       method: 'POST',
+    //       headers: { 'Content-Type': 'application/json' },
+    //       body: JSON.stringify({ name, email, message }),
+    //     });
   
-    if (formValid) {
-      try {
-        const response = await fetch('/api/send-email/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, email, message }),
-        });
-  
-        if (response.ok) {
-          alert('Email sent successfully!');
-        } else {
-          alert('Error sending email. Please try again.');
-        }
-      } catch (error) {
-        console.error('Error sending email:', error);
-        alert('Error sending email. Please try again.');
-      }
-    } else {
-      alert('Please fill out all required fields.');
-    }
+    //     if (response.ok) {
+    //       alert('Email sent successfully!');
+    //     } else {
+    //       alert('Error sending email. Please try again.');
+    //     }
+    //   } catch (error) {
+    //     console.error('Error sending email:', error);
+    //     alert('Error sending email. Please try again.');
+    //   }
+    // } else {
+    //   alert('Please fill out all required fields.');
+    // }
   };
   
 
