@@ -43,11 +43,11 @@ function Projects() {
     },
     {
       id: 5,
-      title: 'Project 5',
+      title: 'GamersRealm',
       image: project5,
       description: 'Ante nulla tempor nibh, et commodo mauris ipsum in leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      deployedLink: 'https://www.example.com',
-      githubLink: 'https://github.com/example/project5',
+      deployedLink: 'https://gamersrealm.herokuapp.com/',
+      githubLink: 'https://github.com/ItsssBobby/GamersRealm',
     },
     {
       id: 6,

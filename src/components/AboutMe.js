@@ -36,7 +36,7 @@ const AboutMe = () => {
         <h2>Languages I Know:</h2>
         <div className="languages-icons">
           {[
-            { src: "/js-logo.png", alt: "JavaScript" },
+            { src: "../images/js-logo.png", alt: "JavaScript" },
             { src: "/nodejs-logo.png", alt: "Node.js" },
             { src: "/sql-logo.png", alt: "SQL" },
             { src: "/mongo-logo.png", alt: "MongoDB" },

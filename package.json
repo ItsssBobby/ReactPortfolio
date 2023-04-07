@@ -4,7 +4,7 @@
   "engines": {
     "node": "16.18.0"
   },
-  "homepage": "https://itsssbobby.github.io/ReactPortfolio/",
+  "homepage": "https://itsssbobby.github.io/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
